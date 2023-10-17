@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PruebaDBModelStoreContainer" CdmEntityContainer="PruebaDBEntities1">
+    <EntitySetMapping Name="Parametros">
+      <EntityTypeMapping TypeName="PruebaDBModel.Parametros">
+        <MappingFragment StoreEntitySet="Parametros">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_InsertarParametro" FunctionName="PruebaDBModel.Store.usp_InsertarParametro" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarParametro" FunctionName="PruebaDBModel.Store.usp_ActualizarParametro" />
+    <FunctionImportMapping FunctionImportName="usp_Obtenerparametros" FunctionName="PruebaDBModel.Store.usp_Obtenerparametros">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebaDBModel.usp_Obtenerparametros_Result">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
